@@ -1,1 +1,0 @@
-Developing a Simple Shell - ALX-Africa. i did this project solely
