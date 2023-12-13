@@ -105,11 +105,11 @@ int create_error(char **args, int err)
 		else
 			error = error_2_cd(args);
 		break;
-	case 404:
-		error = error_404(args);
+	case 126:
+		error = error_126(args);
 		break;
-	case 503:
-		error = error_503(args);
+	case 127:
+		error = error_127(args);
 		break;
 	}
 	write(STDERR_FILENO, error, _strlen(error));
