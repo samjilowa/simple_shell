@@ -67,7 +67,7 @@ list_t *add_node_end(list_t **head, char *folder)
 	if (!new_node)
 		return (NULL);
 
-	new_node->folder = folder;
+	new_node->bucket = folder;
 	new_node->next = NULL;
 
 	if (*head)
@@ -112,7 +112,7 @@ void free_list(list_t *head)
 	while (head)
 	{
 		next = head->next;
-		free(head->folder);
+		free(head->bucket);
 		free(head);
 		head = next;
 	}
